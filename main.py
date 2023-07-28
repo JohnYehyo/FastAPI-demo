@@ -16,7 +16,8 @@ def hello():
 
 @app.get("/item/{item_id}", response_model=ResponseVo[str])
 def item(item_id: str, query: Union[str, None] = None) -> ResponseVo[str]:
-    return {"code": 0, "msg": "操作成功", "data": item_id + (query if query is not None else "")}
+    # return {"code": 0, "msg": "操作成功", "data": item_id + (query if query is not None else "")}
+    return "code"
 
 
 @app.post("/item", response_model=ResponseVo[int])
