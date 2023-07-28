@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  fastapi-demo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fastapi-demo
+    restart: on-failure:3
+    ports:
+      - "8001:8001"
